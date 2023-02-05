@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    html{
+        font-family: 'Source Code Pro';
+    }
+}
+
+nav a:hover{
+    text-shadow: 2px 2px 4px #FF00D1;
+}
+
+.span_me{
+    display: inline-block;
+    transition: all 0.5s;
+}
+.span_me:hover, .span_me:focus{
+    color: #FF00D1;
+    text-shadow: 3px 3px 5px #54ECC4;
+    transform: translateY(-10px);
+}
+
+@keyframes brillance{
+    0%{
+        text-shadow: 0px 0px 0px #54ECC4;
+    }
+    10%{
+        text-shadow: 2px 2px 6px #54ECC4;
+    }
+    14%{
+        text-shadow: 0px 0px 0px #54ECC4;
+    }
+    18%{
+        text-shadow: 2px 2px 2px #FF00D1;
+    }
+    22%{
+        text-shadow: 0px 0px 0px #54ECC4;
+    }
+    100%{
+        text-shadow: 0px 0px 0px #54ECC4;
+    }
+}
+
+.span_skill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #54ECC4;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    opacity: 0;
+    transform: scale(0);
+    z-index: 1;
+    font-weight: bold;
+}
+
+.skill_content:hover .img_skill{
+    transform: scale(1.1);
+    opacity: 0.8;
+    filter: grayscale(1);
+}
+
+.skill_content:hover .span_skill{
+    opacity: 0.8;
+    transform: scale(1);
+}
+
+.test:hover .github_link{
+    right:0;
+}
+
+
+
+
+#contact_content_container{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact_card{
+    background-color: transparent;
+    width: 650px;
+    height: 450px;
+    perspective: 1000px;
+    border-radius: 20px;
+}
+.contact_card_inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.contact_card_front, .contact_card_back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+}
+.contact_card_front{
+    background-color: rgba(255, 255, 255, 0);
+}
+.contact_card_front_content{
+    font-size: 1.2em;
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}

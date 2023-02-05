@@ -1,0 +1,16 @@
+{
+  "name": "test_tailwindcss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "tailwindcss": "npx tailwindcss -i ./src/input.css -o ./build/css/style.css --watch",
+    "prettier":"npx prettier --write **/*.{html,php}"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier-plugin-tailwindcss": "^0.2.2"
+  }
+}
