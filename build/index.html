@@ -222,56 +222,44 @@
         <section class="max-w-4xl mx-auto flex flex-col px-6 gap-6 text-center">
             <h2 class="uppercase text-main-green text-2xl font-bold my-5 text-center">Contact</h2>
 
-            <div id="contact_content_container">
-                <div class="contact_card">
-                    <div class="contact_card_inner">
-                        <div class="contact_card_front">
-                            <div class="contact_card_front_content">
-                                <p class="text-lg">
-                                    Mon profil vous interesse ?<br><br>
-                                    Parfait ! Je suis à la recherche d'un contrat d'apprentissage d'une durée de 1 an afin de poursuivre ma reconversion en Licence. Licence qui s'effectuera de octobre 2023 à juin 2024. <br><br>    
-                                    Contactez moi en cliquant sur le bouton ci-dessous, et je me ferai un plaisir de vous répondre !
-                                </p>
-                                <input class="px-4 py-2 mx-auto border border-main-green bg-main-color text-main-green rounded-md w-fit" type="button" value="CONTACTEZ-MOI">
-                            </div>
+                <div id="contact_card" class="mx-auto bg-gradient-to-r from-grey-color w-full max-w-[600px] sm:mt-16">
+                    <div id="flip_card_inner" class="relative w-full h-full text-center transition-all ease-linear duration-700">
+                        <div id="flip_card_front" class="absolute w-full h-full ">
+                            <p class="text-lg">
+                                Mon profil vous interesse ? <br><br>
+                                Parfait ! Je suis à la recherche d'un contrat de professionnalisation d'une durée de 1 an afin de poursuivre ma reconversion en Licence. Licence qui s'effectuera de octobre 2023 à juin 2024. <br><br>
+                                Contactez moi en cliquant sur le bouton ci-dessous, et je me ferai un plaisir de vous répondre !
+                            </p>
+                            <input id="contact_me_btn" class="mt-16 px-4 py-2 mx-auto border border-main-green bg-main-color text-main-green rounded-md w-fit hover:bg-main-green hover:text-main-color transition-all ease-linear duration-300" type="button" value="CONTACTEZ-MOI">
                         </div>
-                        <div class="contact_card_back">
-                            <form method="post">
-                                <div class="contact_inputbox">
-                                    <input type="text" name="nom" required="required">
-                                    <span>Votre Nom</span>
+
+                        <div id="flip_card_back" class="absolute w-full h-full flex justify-center items-center mt-8">
+                            <form method="post" class="flex flex-col justify-center items-center gap-6 my-auto">
+                                <div class="contact_inputbox relative w-[250px]">
+                                    <input class="w-full p-[10px] border border-white/25 bg-main-color rounded-md outline-none text-white resize-none duration-500" type="text" name="nom" required="required" placeholder=" ">
+                                    <span class="absolute left-0 p-[10px] pointer-events-none text-white/50 duration-500">Votre Nom</span>
                                 </div>
-                                <div class="contact_inputbox">
-                                    <input type="email" name="email" required="required">
-                                    <span>Votre email</span>
+                                <div class="contact_inputbox relative w-[250px]">
+                                    <input class="w-full p-[10px] border border-white/25 bg-main-color rounded-md outline-none text-white resize-none duration-500" type="email" name="email" required="required" placeholder=" ">
+                                    <span class="absolute left-0 p-[10px] pointer-events-none text-white/50 duration-500">Votre email</span>
                                 </div>
-                                <div class="contact_inputbox">
-                                    <textarea name="message" cols="30" rows="10" required="required" placeholder="Votre message ici"></textarea>    
+                                <div class="contact_inputbox relative w-[250px]">
+                                    <textarea class="w-full p-[10px] border border-white/25 bg-main-color rounded-md outline-none text-white resize-none duration-500" name="message" cols="30" rows="10" required="required" placeholder="Votre message ici"></textarea>    
                                 </div>
-                                <input type="submit" value="ENVOYER" id="submit_btn">
+                                <input class="px-4 py-2 mx-auto border border-main-green bg-main-color text-main-green rounded-md w-fit hover:bg-main-green hover:text-main-color transition-all ease-linear duration-300" type="submit" value="ENVOYER" id="submit_btn">
                             </form>
-                            <?php
-                                if (isset($_POST['message'])){
-                                    $retour = mail('couanonthibault@hotmail.fr', 'Formulaire de contact PortFolio', "Nom du contact : " . $_POST['nom'] . "\r\n" .  "email du contact : " . $_POST['email'] . "\r\n" . "message du contact : " . $_POST['message'], 'From : mon-portfolio@hostinger.fr');
-                                    if($retour)
-                                        echo '<p>Votre message a bien été envoyé.</p>';
-                                }?>
                         </div>
+                    </div>  
+                     
+                    <div class="invisible">    
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>  
                     </div>
-                </div>
-            </div>
+                    
 
-
-
-
-
-
-
-
-            
-            
-        </section>
+                </div>      
+        </section>  
     </div>
+    
 
     <script src="./app.js"></script>
 </body>

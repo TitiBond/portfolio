@@ -519,6 +519,14 @@ html{
   --tw-backdrop-sepia:  ;
 }
 
+.pointer-events-none{
+  pointer-events: none;
+}
+
+.invisible{
+  visibility: hidden;
+}
+
 .absolute{
   position: absolute;
 }
@@ -541,6 +549,10 @@ html{
 
 .right-full{
   right: 100%;
+}
+
+.left-0{
+  left: 0px;
 }
 
 .z-10{
@@ -572,12 +584,21 @@ html{
   margin-right: 1.5rem;
 }
 
+.my-auto{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .mt-8{
   margin-top: 2rem;
 }
 
 .mb-8{
   margin-bottom: 2rem;
+}
+
+.mt-16{
+  margin-top: 4rem;
 }
 
 .flex{
@@ -621,6 +642,10 @@ html{
   width: 100%;
 }
 
+.w-\[250px\]{
+  width: 250px;
+}
+
 .max-w-5xl{
   max-width: 64rem;
 }
@@ -629,8 +654,20 @@ html{
   max-width: 56rem;
 }
 
+.max-w-\[600px\]{
+  max-width: 600px;
+}
+
 .basis-3\/4{
   flex-basis: 75%;
+}
+
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.resize-none{
+  resize: none;
 }
 
 .grid-cols-2{
@@ -729,6 +766,10 @@ html{
   border-color: rgb(84 236 196 / var(--tw-border-opacity));
 }
 
+.border-white\/25{
+  border-color: rgb(255 255 255 / 0.25);
+}
+
 .bg-main-color{
   --tw-bg-opacity: 1;
   background-color: rgb(51 51 51 / var(--tw-bg-opacity));
@@ -753,6 +794,16 @@ html{
   background-image: url('/build/img/GitHub_Logo.png');
 }
 
+.bg-gradient-to-r{
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-grey-color{
+  --tw-gradient-from: #9B9B9B;
+  --tw-gradient-to: rgb(155 155 155 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .bg-contain{
   background-size: contain;
 }
@@ -767,6 +818,10 @@ html{
 
 .p-4{
   padding: 1rem;
+}
+
+.p-\[10px\]{
+  padding: 10px;
 }
 
 .px-6{
@@ -848,8 +903,17 @@ html{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-white\/50{
+  color: rgb(255 255 255 / 0.5);
+}
+
 .opacity-70{
   opacity: 0.7;
+}
+
+.outline-none{
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 .grayscale{
@@ -869,6 +933,14 @@ html{
 
 .duration-500{
   transition-duration: 500ms;
+}
+
+.duration-700{
+  transition-duration: 700ms;
+}
+
+.duration-300{
+  transition-duration: 300ms;
 }
 
 .ease-linear{
@@ -946,55 +1018,60 @@ nav a:hover{
   right:0;
 }
 
-#contact_content_container{
-  width: 100%;
-  height: 90%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.contact_card{
-  background-color: transparent;
-  width: 650px;
-  height: 450px;
+#contact_card{
   perspective: 1000px;
-  border-radius: 20px;
 }
 
-.contact_card_inner{
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
+#flip_card_inner{
   transform-style: preserve-3d;
 }
 
-.contact_card_front, .contact_card_back{
-  position: absolute;
-  width: 100%;
-  height: 100%;
+#flip_card_front, #flip_card_back{
   -webkit-backface-visibility: hidden;
+  /* Safari */
   backface-visibility: hidden;
-  border-radius: 20px;
 }
 
-.contact_card_front{
-  background-color: rgba(255, 255, 255, 0);
+#flip_card_back{
+  transform: rotateY(180deg);
 }
 
-.contact_card_front_content{
-  font-size: 1.2em;
-  padding: 40px;
-  border-radius: 20px;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  text-align: center;
+.contact_inputbox input:not(:-moz-placeholder-shown) ~ span{
+  color: #00dfc4;
+  transform: translateX(10px) translateY(-6px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background-color: #333;
+  border: 1px solid #54ECC4;
+  border-radius: 5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.contact_inputbox input:not(:placeholder-shown) ~ span,
+.contact_inputbox input:valid ~ span,
+.contact_inputbox input:focus ~ span{
+  color: #00dfc4;
+  transform: translateX(10px) translateY(-6px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background-color: #333;
+  border: 1px solid #54ECC4;
+  border-radius: 5px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.contact_inputbox input:not(:-moz-placeholder-shown){
+  border:1px solid #54ECC4;
+  border-radius: 4px;
+}
+
+.contact_inputbox input:not(:placeholder-shown),
+.contact_inputbox input:valid,
+.contact_inputbox input:focus{
+  border:1px solid #54ECC4;
+  border-radius: 4px;
 }
 
 .after\:block::after{
@@ -1035,6 +1112,16 @@ nav a:hover{
   transition-duration: 700ms;
 }
 
+.hover\:bg-main-green:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(84 236 196 / var(--tw-bg-opacity));
+}
+
+.hover\:text-main-color:hover{
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity));
+}
+
 .hover\:grayscale-0:hover{
   --tw-grayscale: grayscale(0);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1051,6 +1138,10 @@ nav a:hover{
 }
 
 @media (min-width: 640px){
+  .sm\:mt-16{
+    margin-top: 4rem;
+  }
+
   .sm\:flex{
     display: flex;
   }

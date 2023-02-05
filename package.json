@@ -5,7 +5,7 @@
   "main": "tailwind.config.js",
   "scripts": {
     "tailwindcss": "npx tailwindcss -i ./src/input.css -o ./build/css/style.css --watch",
-    "prettier":"npx prettier --write **/*.{html,php}"
+    "prettier": "npx prettier --write **/*.{html,php}"
   },
   "keywords": [],
   "author": "",
