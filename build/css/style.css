@@ -650,12 +650,12 @@ html{
   width: 250px;
 }
 
-.max-w-5xl{
-  max-width: 64rem;
+.w-1\/4{
+  width: 25%;
 }
 
-.max-w-4xl{
-  max-width: 56rem;
+.max-w-5xl{
+  max-width: 64rem;
 }
 
 .max-w-\[600px\]{
@@ -672,6 +672,10 @@ html{
 
 .resize-none{
   resize: none;
+}
+
+.scroll-mt-20{
+  scroll-margin-top: 5rem;
 }
 
 .grid-cols-2{
@@ -702,6 +706,10 @@ html{
   justify-content: center;
 }
 
+.justify-around{
+  justify-content: space-around;
+}
+
 .justify-items-center{
   justify-items: center;
 }
@@ -720,6 +728,10 @@ html{
 
 .gap-8{
   gap: 2rem;
+}
+
+.gap-3{
+  gap: 0.75rem;
 }
 
 .gap-x-4{
@@ -826,6 +838,10 @@ html{
 
 .p-\[10px\]{
   padding: 10px;
+}
+
+.p-8{
+  padding: 2rem;
 }
 
 .px-6{
@@ -1078,6 +1094,14 @@ nav a:hover{
   border-radius: 4px;
 }
 
+.placeholder\:text-white\/50::-moz-placeholder{
+  color: rgb(255 255 255 / 0.5);
+}
+
+.placeholder\:text-white\/50::placeholder{
+  color: rgb(255 255 255 / 0.5);
+}
+
 .after\:block::after{
   content: var(--tw-content);
   display: block;
@@ -1176,6 +1200,10 @@ nav a:hover{
 
   .sm\:gap-y-14{
     row-gap: 3.5rem;
+  }
+
+  .sm\:scroll-smooth{
+    scroll-behavior: smooth;
   }
 }
 
