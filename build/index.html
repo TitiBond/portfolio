@@ -11,21 +11,39 @@
 </head>
 <body class="min-h-screen bg-main-color ">
     <header class="text-main-green sticky top-0 z-10 bg-main-color">
-        <section class="max-w-5xl mx-auto p-4 flex items-center justify-start sm:justify-end">
+        <section class="max-w-5xl mx-auto p-4 flex items-center justify-between">
+            <a class="h-6 ml-2" href="#home"><img class="h-full" src="/build/img/favicon/favicon2.png" alt=""></a>
             <div>
-                <button id="mobile-open-button" class="text-4xl border-main-green sm:hidden focus:outline-none">
-                    &#9776;
+                
+                <button id="hamburger_button" class="text-4xl border-main-green sm:hidden cursor-pointer relative w-8 h-8">
+                    <div class="bg-main-green w-8 h-1 rounded absolute top-4 -mt-0.5 before:content-[''] before:bg-main-green before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 after:content-[''] after:bg-main-green after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3"></div>
+                    <!-- &#9776; -->
                 </button>
                 <nav class="hidden space-x-8 text-xl uppercase sm:flex sm:justify-center" aria-label="main">
-                    <div ><a href="#mon_parcours" class=" after:block after:h-0.5 after:w-0 after:bg-main-green after:transition-all after:duration-700 after:hover:w-full">About me</a></div>
-                    <div ><a href="#mes_projets" class=" after:block after:h-0.5 after:w-0 after:bg-main-green after:transition-all after:duration-700 after:hover:w-full">My work</a></div>
-                    <div ><a href="#contact" class=" after:block after:h-0.5 after:w-0 after:bg-main-green after:transition-all after:duration-700 after:hover:w-full">Contact</a></div>                    
+                    <div><a href="#mon_parcours" class=" after:block after:h-0.5 after:w-0 after:bg-main-green after:transition-all after:duration-700 after:hover:w-full">About me</a></div>
+                    <div><a href="#mes_projets" class=" after:block after:h-0.5 after:w-0 after:bg-main-green after:transition-all after:duration-700 after:hover:w-full">My work</a></div>
+                    <div><a href="#contact" class=" after:block after:h-0.5 after:w-0 after:bg-main-green after:transition-all after:duration-700 after:hover:w-full">Contact</a></div>
                 </nav>
             </div>
         </section>
+        <section id="mobile_menu" class="absolute top-12 bg-main-color w-full text-5xl flex-col origin-top animate-open-menu hidden">
+            <nav class="flex flex-col section-mobile-menu justify-center items-center py-8 uppercase" aria-label="mobile">
+                <a href="#mon_parcours" class="w-full text-center py-6 ">About me</a>
+                <a href="#mes_projets" class="w-full text-center py-6 ">My work</a>
+                <a href="#contact" class="w-full text-center py-6 ">Contact</a>
+                <div class="flex justify-around absolute bottom-4">
+                    <a href="https://fr.linkedin.com/in/thibaultcouanon" target="_blank" class="w-1/4">
+                        <img src="/build/img/linkedin_logo.svg" alt="my_linkedin">
+                    </a>
+                    <a href="https://github.com/TitiBond" target="_blank" class="w-1/4">
+                        <img src="/build/img/github_logo.svg" alt="my_github">
+                    </a>    
+                </div>
+            </nav>
+        </section>
     </header>
     <div class="max-w-5xl mx-auto">
-        <section class="flex flex-col justify-center px-6 items-start gap-4 text-white">
+        <section id="home" class="flex flex-col justify-center px-6 items-start gap-4 text-white scroll-mt-20">
             <p class="tracking-widest text-main-green">Salut ! Moi c'est </p>
             <div class="flex flex-col sm:flex-row sm:gap-10 font-bold">
                 <span class="text-5xl -tracking-7">

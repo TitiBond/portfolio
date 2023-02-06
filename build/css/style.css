@@ -543,6 +543,18 @@ html{
   top: 0px;
 }
 
+.top-4{
+  top: 1rem;
+}
+
+.top-12{
+  top: 3rem;
+}
+
+.bottom-4{
+  bottom: 1rem;
+}
+
 .-right-full{
   right: -100%;
 }
@@ -589,6 +601,18 @@ html{
   margin-bottom: auto;
 }
 
+.ml-2{
+  margin-left: 0.5rem;
+}
+
+.-mt-0\.5{
+  margin-top: -0.125rem;
+}
+
+.-mt-0{
+  margin-top: -0px;
+}
+
 .mt-8{
   margin-top: 2rem;
 }
@@ -617,8 +641,16 @@ html{
   display: none;
 }
 
+.h-6{
+  height: 1.5rem;
+}
+
 .h-full{
   height: 100%;
+}
+
+.h-8{
+  height: 2rem;
 }
 
 .h-1{
@@ -627,6 +659,18 @@ html{
 
 .min-h-screen{
   min-height: 100vh;
+}
+
+.w-8{
+  width: 2rem;
+}
+
+.w-full{
+  width: 100%;
+}
+
+.w-1\/4{
+  width: 25%;
 }
 
 .w-1\/2{
@@ -642,16 +686,8 @@ html{
   width: fit-content;
 }
 
-.w-full{
-  width: 100%;
-}
-
 .w-\[250px\]{
   width: 250px;
-}
-
-.w-1\/4{
-  width: 25%;
 }
 
 .max-w-5xl{
@@ -666,8 +702,30 @@ html{
   flex-basis: 75%;
 }
 
+.origin-top{
+  transform-origin: top;
+}
+
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes open-menu{
+  0%{
+    transform: scaleY(0);
+  }
+
+  100%{
+    transform: scaleY(1);
+  }
+}
+
+.animate-open-menu{
+  animation: open-menu 0.5s ease-in-out forwards;
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .resize-none{
@@ -698,12 +756,12 @@ html{
   align-items: center;
 }
 
-.justify-start{
-  justify-content: flex-start;
-}
-
 .justify-center{
   justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
 }
 
 .justify-around{
@@ -749,6 +807,10 @@ html{
   overflow: hidden;
 }
 
+.rounded{
+  border-radius: 0.25rem;
+}
+
 .rounded-xl{
   border-radius: 0.75rem;
 }
@@ -791,6 +853,11 @@ html{
   background-color: rgb(51 51 51 / var(--tw-bg-opacity));
 }
 
+.bg-main-green{
+  --tw-bg-opacity: 1;
+  background-color: rgb(84 236 196 / var(--tw-bg-opacity));
+}
+
 .bg-grey-color{
   --tw-bg-opacity: 1;
   background-color: rgb(155 155 155 / var(--tw-bg-opacity));
@@ -799,11 +866,6 @@ html{
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-main-green{
-  --tw-bg-opacity: 1;
-  background-color: rgb(84 236 196 / var(--tw-bg-opacity));
 }
 
 .bg-github{
@@ -842,6 +904,16 @@ html{
 
 .p-8{
   padding: 2rem;
+}
+
+.py-8{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .px-6{
@@ -965,6 +1037,10 @@ html{
 
 .ease-linear{
   transition-timing-function: linear;
+}
+
+.section-mobile-menu{
+  min-height: calc(100vh - 48px);
 }
 
 nav a:hover{
@@ -1102,9 +1178,62 @@ nav a:hover{
   color: rgb(255 255 255 / 0.5);
 }
 
+.before\:absolute::before{
+  content: var(--tw-content);
+  position: absolute;
+}
+
+.before\:h-1::before{
+  content: var(--tw-content);
+  height: 0.25rem;
+}
+
+.before\:w-8::before{
+  content: var(--tw-content);
+  width: 2rem;
+}
+
+.before\:-translate-x-4::before{
+  content: var(--tw-content);
+  --tw-translate-x: -1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.before\:-translate-y-3::before{
+  content: var(--tw-content);
+  --tw-translate-y: -0.75rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.before\:rounded::before{
+  content: var(--tw-content);
+  border-radius: 0.25rem;
+}
+
+.before\:bg-main-green::before{
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(84 236 196 / var(--tw-bg-opacity));
+}
+
+.before\:content-\[\'\'\]::before{
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.after\:absolute::after{
+  content: var(--tw-content);
+  position: absolute;
+}
+
 .after\:block::after{
   content: var(--tw-content);
   display: block;
+}
+
+.after\:h-1::after{
+  content: var(--tw-content);
+  height: 0.25rem;
 }
 
 .after\:h-0\.5::after{
@@ -1117,9 +1246,31 @@ nav a:hover{
   height: 0px;
 }
 
+.after\:w-8::after{
+  content: var(--tw-content);
+  width: 2rem;
+}
+
 .after\:w-0::after{
   content: var(--tw-content);
   width: 0px;
+}
+
+.after\:-translate-x-4::after{
+  content: var(--tw-content);
+  --tw-translate-x: -1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.after\:translate-y-3::after{
+  content: var(--tw-content);
+  --tw-translate-y: 0.75rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.after\:rounded::after{
+  content: var(--tw-content);
+  border-radius: 0.25rem;
 }
 
 .after\:bg-main-green::after{
@@ -1138,6 +1289,11 @@ nav a:hover{
 .after\:duration-700::after{
   content: var(--tw-content);
   transition-duration: 700ms;
+}
+
+.after\:content-\[\'\'\]::after{
+  --tw-content: '';
+  content: var(--tw-content);
 }
 
 .hover\:bg-main-green:hover{
@@ -1160,11 +1316,6 @@ nav a:hover{
   width: 100%;
 }
 
-.focus\:outline-none:focus{
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
 @media (min-width: 640px){
   .sm\:mt-0{
     margin-top: 0px;
@@ -1184,10 +1335,6 @@ nav a:hover{
 
   .sm\:flex-row{
     flex-direction: row;
-  }
-
-  .sm\:justify-end{
-    justify-content: flex-end;
   }
 
   .sm\:justify-center{
