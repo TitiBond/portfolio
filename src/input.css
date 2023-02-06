@@ -71,7 +71,7 @@ nav a:hover{
     transform: scale(1);
 }
 
-.test:hover .github_link{
+.img_skill_container:hover .github_link{
     right:0;
 }
 
