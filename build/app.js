@@ -35,8 +35,10 @@ mobile_menu.addEventListener('click',toggleMenu);
 /*START SLIDER*/
 let carousel = document.querySelector('#slider_container');
 let indicators = document.querySelectorAll('.indicator');
-let elements = document.querySelectorAll('#slider_container > *');
-console.log(elements);
+let slides = document.querySelectorAll('.slide');
+const nbSlide = slides.length;
+const prev_btn = document.querySelector('#prev_btn');
+const next_btn = document.querySelector('#next_btn');
 let currentIndex = 0;
 
 function renderIndicator() {
@@ -61,8 +63,20 @@ let observer = new IntersectionObserver(function(entries, observer) {
   root:carousel, threshold:0.5
 });
 var elementIndices = {};
-for (var i = 0; i < elements.length; i++) {
-  elementIndices[elements[i].getAttribute("id")] = i;
-  observer.observe(elements[i]);
+for (var i = 0; i < slides.length; i++) {
+  elementIndices[slides[i].getAttribute("id")] = i;
+  observer.observe(slides[i]);
 }
+
+
+function nextSlide(){
+    let testslide = slides[currentIndex].scrollWidth;
+    carousel.scrollBy(testslide,0);
+}
+function prevSlide(){
+    let testslide = slides[currentIndex].scrollWidth;
+    carousel.scrollBy(-testslide,0);
+}
+next_btn.addEventListener('click', nextSlide);
+prev_btn.addEventListener('click',prevSlide);
 /*END SLIDER*/
