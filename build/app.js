@@ -17,12 +17,15 @@ function formRotation(){
 /*DEBUT MENU BURGER*/
 const hamburger_btn = document.querySelector('#hamburger_button');
 const mobile_menu = document.querySelector('#mobile_menu');
+const titi_home_icon = document.querySelector('#titi_home_icon');
 
 function toggleMenu(){
     mobile_menu.classList.toggle('hidden');
     mobile_menu.classList.toggle('flex');
+    hamburger_btn.classList.toggle('toggle-btn');
 }
 
 hamburger_btn.addEventListener('click',toggleMenu);
 mobile_menu.addEventListener('click',toggleMenu);
+
 /*FIN MENU BURGER*/

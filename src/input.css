@@ -8,6 +8,10 @@
     .section-mobile-menu{
         min-height: calc(100vh - 48px);
     }
+
+    .toggle-btn{
+        @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-opacity-0 [&>div]:rotate-[180deg]
+    }
 }
 
 @layer base{

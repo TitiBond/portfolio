@@ -1,298 +1,582 @@
 <!DOCTYPE html>
-<html lang="en" class="sm:scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg">
-    <link rel="icon" type="image/png" href="./img/favicon/favicon.png">
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" href="./img/favicon/favicon.png" />
     <title>C.Thibault</title>
-</head>
-<body class="min-h-screen bg-main-color ">
-    <header class="text-main-green sticky top-0 z-10 bg-main-color">
-        <section class="max-w-5xl mx-auto p-4 flex items-center justify-between">
-            <a class="h-6 ml-2" href="#home"><img class="h-full" src="/build/img/favicon/favicon2.png" alt=""></a>
+  </head>
+  <body class="min-h-screen bg-main-color">
+    <header
+      class="sticky top-0 z-10 mb-8 bg-main-color text-main-green shadow-md"
+    >
+      <section class="mx-auto flex max-w-5xl items-center justify-between p-4">
+        <a id="titi_home_icon" class="ml-2 h-6" href="#home"
+          ><img class="h-full" src="/build/img/favicon/favicon2.png" alt=""
+        /></a>
+        <div>
+          <button
+            id="hamburger_button"
+            class="relative h-8 w-8 cursor-pointer border-main-green text-4xl sm:hidden"
+          >
+            <div
+              class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-main-green transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-main-green before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-main-green after:transition-all after:duration-500 after:content-['']"
+            ></div>
+            <!-- &#9776; -->
+          </button>
+          <nav
+            class="hidden space-x-8 text-xl uppercase sm:flex sm:justify-center"
+            aria-label="main"
+          >
             <div>
-                
-                <button id="hamburger_button" class="text-4xl border-main-green sm:hidden cursor-pointer relative w-8 h-8">
-                    <div class="bg-main-green w-8 h-1 rounded absolute top-4 -mt-0.5 before:content-[''] before:bg-main-green before:w-8 before:h-1 before:rounded before:absolute before:-translate-x-4 before:-translate-y-3 after:content-[''] after:bg-main-green after:w-8 after:h-1 after:rounded after:absolute after:-translate-x-4 after:translate-y-3"></div>
-                    <!-- &#9776; -->
-                </button>
-                <nav class="hidden space-x-8 text-xl uppercase sm:flex sm:justify-center" aria-label="main">
-                    <div><a href="#mon_parcours" class=" after:block after:h-0.5 after:w-0 after:bg-main-green after:transition-all after:duration-700 after:hover:w-full">About me</a></div>
-                    <div><a href="#mes_projets" class=" after:block after:h-0.5 after:w-0 after:bg-main-green after:transition-all after:duration-700 after:hover:w-full">My work</a></div>
-                    <div><a href="#contact" class=" after:block after:h-0.5 after:w-0 after:bg-main-green after:transition-all after:duration-700 after:hover:w-full">Contact</a></div>
-                </nav>
+              <a
+                href="#mon_parcours"
+                class="after:block after:h-0.5 after:w-0 after:bg-main-green after:transition-all after:duration-700 after:hover:w-full"
+                >About me</a
+              >
             </div>
-        </section>
-        <section id="mobile_menu" class="absolute top-12 bg-main-color w-full text-5xl flex-col origin-top animate-open-menu hidden">
-            <nav class="flex flex-col section-mobile-menu justify-center items-center py-8 uppercase" aria-label="mobile">
-                <a href="#mon_parcours" class="w-full text-center py-6 ">About me</a>
-                <a href="#mes_projets" class="w-full text-center py-6 ">My work</a>
-                <a href="#contact" class="w-full text-center py-6 ">Contact</a>
-                <div class="flex justify-around absolute bottom-4">
-                    <a href="https://fr.linkedin.com/in/thibaultcouanon" target="_blank" class="w-1/4">
-                        <img src="/build/img/linkedin_logo.svg" alt="my_linkedin">
-                    </a>
-                    <a href="https://github.com/TitiBond" target="_blank" class="w-1/4">
-                        <img src="/build/img/github_logo.svg" alt="my_github">
-                    </a>    
-                </div>
-            </nav>
-        </section>
+            <div>
+              <a
+                href="#mes_projets"
+                class="after:block after:h-0.5 after:w-0 after:bg-main-green after:transition-all after:duration-700 after:hover:w-full"
+                >My work</a
+              >
+            </div>
+            <div>
+              <a
+                href="#contact"
+                class="after:block after:h-0.5 after:w-0 after:bg-main-green after:transition-all after:duration-700 after:hover:w-full"
+                >Contact</a
+              >
+            </div>
+          </nav>
+        </div>
+      </section>
+      <section
+        id="mobile_menu"
+        class="absolute top-12 hidden w-full origin-top animate-open-menu flex-col bg-main-color/95 text-5xl"
+      >
+        <nav
+          class="section-mobile-menu flex flex-col items-center justify-center py-8 uppercase"
+          aria-label="mobile"
+        >
+          <a href="#mon_parcours" class="w-full py-6 text-center">About me</a>
+          <a href="#mes_projets" class="w-full py-6 text-center">My work</a>
+          <a href="#contact" class="w-full py-6 text-center">Contact</a>
+          <div class="absolute bottom-4 flex justify-around">
+            <a
+              href="https://fr.linkedin.com/in/thibaultcouanon"
+              target="_blank"
+              class="w-1/4"
+            >
+              <img src="/build/img/linkedin_logo.svg" alt="my_linkedin" />
+            </a>
+            <a href="https://github.com/TitiBond" target="_blank" class="w-1/4">
+              <img src="/build/img/github_logo.svg" alt="my_github" />
+            </a>
+          </div>
+        </nav>
+      </section>
     </header>
-    <div class="max-w-5xl mx-auto">
-        <section id="home" class="flex flex-col justify-center px-6 items-start gap-4 text-white scroll-mt-20">
-            <p class="tracking-widest text-main-green">Salut ! Moi c'est </p>
-            <div class="flex flex-col sm:flex-row sm:gap-10 font-bold">
-                <span class="text-5xl -tracking-7">
-                    <span class="span_me">T</span>
-                    <span class="span_me">h</span>
-                    <span class="span_me">i</span>
-                    <span class="span_me">b</span>
-                    <span class="span_me">a</span>
-                    <span class="span_me">u</span>
-                    <span class="span_me">l</span>
-                    <span class="span_me">t</span>
-                </span>
-                <span class="text-5xl -tracking-7">
-                    <span class="span_me">C</span>
-                    <span class="span_me">o</span>
-                    <span class="span_me">u</span>
-                    <span class="span_me">a</span>
-                    <span class="span_me">n</span>
-                    <span class="span_me">o</span>
-                    <span class="span_me">n</span>
-                </span>
-            </div>
-            <div class="flex flex-wrap -tracking-6 gap-x-4 text-lg ">
-                <span>
-                    <span class="span_dev">W</span>
-                    <span class="span_dev">e</span>
-                    <span class="span_dev">b</span>
-                </span>
-                <span>
-                    <span class="span_dev">D</span>
-                    <span class="span_dev">e</span>
-                    <span class="span_dev">v</span>
-                    <span class="span_dev">e</span>
-                    <span class="span_dev">l</span>
-                    <span class="span_dev">o</span>
-                    <span class="span_dev">p</span>
-                    <span class="span_dev">p</span>
-                    <span class="span_dev">e</span>
-                    <span class="span_dev">r</span>
-                </span>
-                <span>
-                    <span class="span_dev">F</span>
-                    <span class="span_dev">u</span>
-                    <span class="span_dev">l</span>
-                    <span class="span_dev">l</span>
-                    <span class="span_dev">s</span>
-                    <span class="span_dev">t</span>
-                    <span class="span_dev">a</span>
-                    <span class="span_dev">c</span>
-                    <span class="span_dev">k</span>
-                </span>
-                <span>
-                    <span class="span_dev">e</span>
-                    <span class="span_dev">n</span>
-                </span>
-                <span>
-                    <span class="span_dev">R</span>
-                    <span class="span_dev">e</span>
-                    <span class="span_dev">c</span>
-                    <span class="span_dev">o</span>
-                    <span class="span_dev">n</span>
-                    <span class="span_dev">v</span>
-                    <span class="span_dev">e</span>
-                    <span class="span_dev">r</span>
-                    <span class="span_dev">s</span>
-                    <span class="span_dev">i</span>
-                    <span class="span_dev">o</span>
-                    <span class="span_dev">n</span>
-                </span>      
-            </div>
-            <p class="mt-8">Dans le cadre de ma reconversion, je poursuis mes études en licence "Developpeur Web Mobile". Je suis donc à la recherche d'un contrat de professionnalisation d'une durée de 1 an.</p>            
-        </section>
+    <div class="mx-auto max-w-5xl">
+      <section
+        id="home"
+        class="flex scroll-mt-24 flex-col items-start justify-center gap-4 px-6 text-white"
+      >
+        <p class="tracking-widest text-main-green">Salut ! Moi c'est</p>
+        <div class="flex flex-col font-bold sm:flex-row sm:gap-10">
+          <span class="text-5xl -tracking-7">
+            <span class="span_me">T</span>
+            <span class="span_me">h</span>
+            <span class="span_me">i</span>
+            <span class="span_me">b</span>
+            <span class="span_me">a</span>
+            <span class="span_me">u</span>
+            <span class="span_me">l</span>
+            <span class="span_me">t</span>
+          </span>
+          <span class="text-5xl -tracking-7">
+            <span class="span_me">C</span>
+            <span class="span_me">o</span>
+            <span class="span_me">u</span>
+            <span class="span_me">a</span>
+            <span class="span_me">n</span>
+            <span class="span_me">o</span>
+            <span class="span_me">n</span>
+          </span>
+        </div>
+        <div class="flex flex-wrap gap-x-4 text-lg -tracking-6">
+          <span>
+            <span class="span_dev">W</span>
+            <span class="span_dev">e</span>
+            <span class="span_dev">b</span>
+          </span>
+          <span>
+            <span class="span_dev">D</span>
+            <span class="span_dev">e</span>
+            <span class="span_dev">v</span>
+            <span class="span_dev">e</span>
+            <span class="span_dev">l</span>
+            <span class="span_dev">o</span>
+            <span class="span_dev">p</span>
+            <span class="span_dev">p</span>
+            <span class="span_dev">e</span>
+            <span class="span_dev">r</span>
+          </span>
+          <span>
+            <span class="span_dev">F</span>
+            <span class="span_dev">u</span>
+            <span class="span_dev">l</span>
+            <span class="span_dev">l</span>
+            <span class="span_dev">s</span>
+            <span class="span_dev">t</span>
+            <span class="span_dev">a</span>
+            <span class="span_dev">c</span>
+            <span class="span_dev">k</span>
+          </span>
+          <span>
+            <span class="span_dev">e</span>
+            <span class="span_dev">n</span>
+          </span>
+          <span>
+            <span class="span_dev">R</span>
+            <span class="span_dev">e</span>
+            <span class="span_dev">c</span>
+            <span class="span_dev">o</span>
+            <span class="span_dev">n</span>
+            <span class="span_dev">v</span>
+            <span class="span_dev">e</span>
+            <span class="span_dev">r</span>
+            <span class="span_dev">s</span>
+            <span class="span_dev">i</span>
+            <span class="span_dev">o</span>
+            <span class="span_dev">n</span>
+          </span>
+        </div>
+        <p class="mt-8">
+          Dans le cadre de ma reconversion, je poursuis mes études en licence
+          "Developpeur Web Mobile". Je suis donc à la recherche d'un contrat de
+          professionnalisation d'une durée de 1 an.
+        </p>
+      </section>
     </div>
-    <div class="bg-grey-color my-16 py-16">
-        <section class="max-w-5xl mx-auto flex flex-col px-6 items-center md:flex-row md:justify-around">
-            <img class="w-1/2 sm:w-1/3 md:w-1/3 rounded-tl-3xl rounded-br-3xl rounded-tr-[25%] rounded-bl-[25%] grayscale transition-all ease-linear duration-1000 hover:grayscale-0 mb-8 md:mb-0 md:mt-6" src="./img/me.jpg" alt="picture_of_me">
-            <div class="md:px-10 md:text-justify">
-                <h2 class="uppercase text-main-green text-2xl font-bold my-4 text-center">mieux vaut tard que jamais !</h2>
-                <p>J'ai toujours été attiré par l'informatique, le multimédia, la technologie... Quand j'étais plus jeune, je me souviens encore passer des heures devant mon écran afin de modder,voire parfois débuguer des jeux pour leur ajouter du contenu. Je prenais du plaisir à ça. <br> Il y avait un truc... Ce petit truc de logique qui rend presque accro. <br> Pourtant mes choix ne m'ont pas orienté sur ce chemin là. <br> Je suis cependant persuadé que nous aspirons tous à faire un travail qui nous correspond, qui nous plait. <br> C'est pour cela qu'à 35 ans, j'ai décidé de me reconvertir, et de retrouver ce plaisir.</p>
-            </div>    
-        </section>
-    </div>
-
-    <div class="max-w-5xl mx-auto">
-        <section id="mon_parcours" class="flex flex-col scroll-mt-20">
-            <h2 class="uppercase text-main-green text-2xl font-bold my-5 text-center">mon parcours</h2>
-        </section>
-    </div>
-
-    <div class="bg-grey-color my-16 py-16">
-        <section class="max-w-5xl mx-auto flex flex-col px-6 gap-6">
-            <h2 class="uppercase text-main-green text-2xl font-bold my-5 text-center">&lt\CODE&gt</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 sm:gap-y-14 md:gap-y-16 gap-6 justify-items-center items-center ">
-                <div class="grid justify-items-center items-center skill_content">
-                    <img class="w-1/2 transition-aall ease-linear duration-500  img_skill" src="./img/language_icons/html.svg" alt="html_svg">
-                    <span class="transition-all ease-linear duration-500 span_skill">HTML</span>
-                </div>
-                <div class="grid justify-items-center items-center skill_content">
-                    <img class="w-1/2 transition-aall ease-linear duration-500  img_skill" src="./img/language_icons/css.svg" alt="css_svg">
-                    <span class="transition-all ease-linear duration-500 span_skill">CSS</span>
-                </div>
-                <div class="grid justify-items-center items-center skill_content">
-                    <img class="w-1/2 transition-aall ease-linear duration-500  img_skill" src="./img/language_icons/javascript.svg" alt="javascript_svg">
-                    <span class="transition-all ease-linear duration-500 span_skill">JAVASCRIPT</span>
-                </div>
-                <div class="grid justify-items-center items-center skill_content">
-                    <img class="w-1/2 transition-aall ease-linear duration-500  img_skill" src="./img/language_icons/java.svg" alt="java_svg">
-                    <span class="transition-all ease-linear duration-500 span_skill">JAVA</span>
-                </div>
-                <div class="grid justify-items-center items-center skill_content">
-                    <img class="w-1/2 transition-aall ease-linear duration-500  img_skill" src="./img/language_icons/php.svg" alt="php_svg">
-                    <span class="transition-all ease-linear duration-500 span_skill">PHP</span>
-                </div>
-                <div class="grid justify-items-center items-center skill_content">
-                    <img class="w-1/2 transition-aall ease-linear duration-500  img_skill" src="./img/language_icons/python.svg" alt="python_svg">
-                    <span class="transition-all ease-linear duration-500 span_skill">PYTHON</span>
-                </div> 
-            </div>
-        </section>
+    <div class="my-16 bg-grey-color py-16">
+      <section
+        class="mx-auto flex max-w-5xl flex-col items-center px-6 md:flex-row md:justify-around"
+      >
+        <img
+          class="mb-8 w-1/2 rounded-tl-3xl rounded-br-3xl rounded-tr-[25%] rounded-bl-[25%] grayscale transition-all duration-1000 ease-linear hover:grayscale-0 sm:w-1/3 md:mb-0 md:mt-6 md:w-1/3"
+          src="./img/me.jpg"
+          alt="picture_of_me"
+        />
+        <div class="md:px-10 md:text-justify">
+          <h2
+            class="my-4 text-center text-2xl font-bold uppercase text-main-green"
+          >
+            mieux vaut tard que jamais !
+          </h2>
+          <p>
+            J'ai toujours été attiré par l'informatique, le multimédia, la
+            technologie... Quand j'étais plus jeune, je me souviens encore
+            passer des heures devant mon écran afin de modder,voire parfois
+            débuguer des jeux pour leur ajouter du contenu. Je prenais du
+            plaisir à ça. <br />
+            Il y avait un truc... Ce petit truc de logique qui rend presque
+            accro. <br />
+            Pourtant mes choix ne m'ont pas orienté sur ce chemin là. <br />
+            Je suis cependant persuadé que nous aspirons tous à faire un travail
+            qui nous correspond, qui nous plait. <br />
+            C'est pour cela qu'à 35 ans, j'ai décidé de me reconvertir, et de
+            retrouver ce plaisir.
+          </p>
+        </div>
+      </section>
     </div>
 
-    <div class="max-w-5xl mx-auto">
-        <section id="mes_projets" class="flex flex-col justify-center items-center gap-16 mx-6 scroll-mt-20">
-            <h2 class="uppercase text-main-green text-2xl font-bold my-5 text-center">mes projets</h2>
-
-            <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-x-12">
-                <div class="w-1/3 md:basis-1/4 relative img_skill_container overflow-hidden">
-                    <img class="w-fit rounded-xl" src="./img/project_picture/Fish_Memory.jpg" alt="memory_project_img">
-                    <a href="https://github.com/TitiBond/Projet_Python_CF" target="_blank" class="github_link -right-full rounded-xl absolute top-0 w-full h-full bg-white opacity-70 transition-all ease-linear duration-500 bg-github bg-contain bg-no-repeat bg-center"></a>
-                </div>
-                
-                <div class="text-white flex flex-col justify-center items-center gap-4 text-justify basis-3/4">
-                    <h3 class="font-bold text-xl">Fish Memory</h3>
-                    <p>Petit projet en <span class="text-main-green">Python</span> d'un jeu de mémoire basé sur le Memory. L'idée était de mélanger cela avec des images d'un jeu de société que j'adore "Twin it!". Nous avons eu 2 jours pour réaliser ce projet.</p>
-                </div>
-            </div>
-
-            <hr class="mx-auto md:my-20 bg-main-green w-1/2 h-1">
-
-            <div class="flex flex-col md:flex-row-reverse justify-center items-center gap-8 md:gap-x-12 ">
-                <div class="w-1/3 md:basis-1/4 relative img_skill_container overflow-hidden">
-                    <img class="w-fit rounded-xl" src="./img/project_picture/D&D.jpg" alt="DD_project_img">
-                    <a href="https://github.com/TitiBond/Projet_Java_CF" target="_blank" class="github_link right-full rounded-xl absolute top-0 w-full h-full bg-white opacity-70 transition-all ease-linear duration-500 bg-github bg-contain bg-no-repeat bg-center"></a>
-                </div>
-                <div class="text-white flex flex-col justify-center items-center gap-4 text-justify basis-3/4">
-                    <h3 class="font-bold text-xl">Dungeon and Dragon</h3>
-                    <p>Ce projet est un D&D like textuel. Il a été réalisé en <span class="text-main-green">JAVA</span> afin de nous permettre d'apprendre le <span class="text-main-green">POO</span>. Nous avons réalisé ce projet en 4 jours.</p>
-                </div>
-            </div>
-
-            <hr class="mx-auto md:my-20 bg-main-green w-1/2 h-1">
-
-            <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-x-12">
-                <div class="w-1/3 md:basis-1/4 relative img_skill_container overflow-hidden">
-                    <img class="w-fit rounded-xl" src="./img/project_picture/quiz.jpg" alt="quiz_project_img">
-                    <a href="https://github.com/TitiBond/Projet_Android_CF" target="_blank" class="github_link -right-full rounded-xl absolute top-0 w-full h-full bg-white opacity-70 transition-all ease-linear duration-500 bg-github bg-contain bg-no-repeat bg-center"></a>
-                </div>
-                
-                <div class="text-white flex flex-col justify-center items-center gap-4 text-justify basis-3/4">
-                    <h3 class="font-bold text-xl">Quiz Android</h3>
-                    <p>Quiz Android est un petit projet que nous avons réalisé en 2 jours. Nous avons utilisé <span class="text-main-green">JAVA</span>. Vraiment interessant de découvrir la création d'application smartphone. Notre semaine sur <span class="text-main-green">Android</span> n'a duré que 4 jours, j'aurais adoré avoir plus de temps !</p>
-                </div>
-            </div>
-
-            <hr class="mx-auto md:my-20 bg-main-green w-1/2 h-1">
-
-            <div class="flex flex-col md:flex-row-reverse justify-center items-center gap-8 md:gap-x-12 ">
-                <div class="w-1/3 md:basis-1/4 relative img_skill_container overflow-hidden">
-                    <img class="w-fit rounded-xl" src="./img/project_picture/calculator.jpg" alt="calculator_training_img">
-                    <a href="https://github.com/TitiBond/Training_Javascript_Calculette" target="_blank" class="github_link right-full rounded-xl absolute top-0 w-full h-full bg-white opacity-70 transition-all ease-linear duration-500 bg-github bg-contain bg-no-repeat bg-center"></a>
-                </div>
-                <div class="text-white flex flex-col justify-center items-center gap-4 text-justify basis-3/4">
-                    <h3 class="font-bold text-xl">Calculator</h3>
-                    <p>J'ai eu envi de pratiquer html/css et <span class="text-main-green">Javascript</span>. J'ai donc décidé de faire cet exercice connu de la calculette. Une petite journée de travail pour terminer. J'ai pris beaucoup de plaisir à réfléchir à la logique du script :)</p>
-                </div>
-            </div>
-
-            <hr class="mx-auto md:my-20 bg-main-green w-1/2 h-1">
-
-            <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-x-12 ">
-                <div class="w-1/3 md:basis-1/4 relative img_skill_container overflow-hidden">
-                    <img class="w-fit rounded-xl" src="./img/project_picture/la_caverne.jpg" alt="php_project_img">
-                    <a href="https://github.com/TitiBond/PROJET_PHP_CF" target="_blank" class="github_link -right-full rounded-xl absolute top-0 w-full h-full bg-white opacity-70 transition-all ease-linear duration-500 bg-github bg-contain bg-no-repeat bg-center"></a>
-                </div>
-                <div class="text-white flex flex-col justify-center items-center gap-4 text-justify basis-3/4">
-                    <h3 class="font-bold text-xl">La caverne des jeux</h3>
-                    <p>La caverne des jeux est un projet réalisé dans le cadre du cours de <span class="text-main-green">PHP</span> à la Coding Factory. L'objectif était de réaliser, en 3 jours, un site PHP dynamique, sans framework, avec connexion à une base de données <span class="text-main-green">MySQL</span>. Pour la partie Front, le framework Bootstrap est utilisée. Le projet réalisé correspond à un site marchand de jeux de société.</p>
-                </div>
-            </div>
-        </section>
+    <div class="mx-auto max-w-5xl">
+      <section id="mon_parcours" class="flex scroll-mt-20 flex-col">
+        <h2
+          class="my-5 text-center text-2xl font-bold uppercase text-main-green"
+        >
+          mon parcours
+        </h2>
+      </section>
     </div>
 
-    <div class="bg-grey-color mt-16 py-16">
-        <section id="contact" class="max-w-5xl mx-auto flex flex-col px-6 gap-6 text-center scroll-mt-20">
-            <h2 class="uppercase text-main-green text-2xl font-bold my-5 text-center">Contact</h2>
+    <div class="my-16 bg-grey-color py-16">
+      <section class="mx-auto flex max-w-5xl flex-col gap-6 px-6">
+        <h2
+          class="my-5 text-center text-2xl font-bold uppercase text-main-green"
+        >
+          &lt\CODE&gt
+        </h2>
+        <div
+          class="grid grid-cols-2 items-center justify-items-center gap-6 sm:gap-y-14 md:grid-cols-3 md:gap-y-16"
+        >
+          <div class="skill_content grid items-center justify-items-center">
+            <img
+              class="transition-aall img_skill w-1/2 duration-500 ease-linear"
+              src="./img/language_icons/html.svg"
+              alt="html_svg"
+            />
+            <span class="span_skill transition-all duration-500 ease-linear"
+              >HTML</span
+            >
+          </div>
+          <div class="skill_content grid items-center justify-items-center">
+            <img
+              class="transition-aall img_skill w-1/2 duration-500 ease-linear"
+              src="./img/language_icons/css.svg"
+              alt="css_svg"
+            />
+            <span class="span_skill transition-all duration-500 ease-linear"
+              >CSS</span
+            >
+          </div>
+          <div class="skill_content grid items-center justify-items-center">
+            <img
+              class="transition-aall img_skill w-1/2 duration-500 ease-linear"
+              src="./img/language_icons/javascript.svg"
+              alt="javascript_svg"
+            />
+            <span class="span_skill transition-all duration-500 ease-linear"
+              >JAVASCRIPT</span
+            >
+          </div>
+          <div class="skill_content grid items-center justify-items-center">
+            <img
+              class="transition-aall img_skill w-1/2 duration-500 ease-linear"
+              src="./img/language_icons/java.svg"
+              alt="java_svg"
+            />
+            <span class="span_skill transition-all duration-500 ease-linear"
+              >JAVA</span
+            >
+          </div>
+          <div class="skill_content grid items-center justify-items-center">
+            <img
+              class="transition-aall img_skill w-1/2 duration-500 ease-linear"
+              src="./img/language_icons/php.svg"
+              alt="php_svg"
+            />
+            <span class="span_skill transition-all duration-500 ease-linear"
+              >PHP</span
+            >
+          </div>
+          <div class="skill_content grid items-center justify-items-center">
+            <img
+              class="transition-aall img_skill w-1/2 duration-500 ease-linear"
+              src="./img/language_icons/python.svg"
+              alt="python_svg"
+            />
+            <span class="span_skill transition-all duration-500 ease-linear"
+              >PYTHON</span
+            >
+          </div>
+        </div>
+      </section>
+    </div>
 
-                <div id="contact_card" class="mx-auto bg-gradient-to-r from-grey-color w-full max-w-[600px] ">
-                    <div id="flip_card_inner" class="relative w-full h-full text-center transition-all ease-linear duration-700">
-                        <div id="flip_card_front" class="absolute w-full h-full ">
-                            <p class="text-lg">
-                                Mon profil vous interesse ? <br><br>
-                                Parfait ! Je suis à la recherche d'un contrat de professionnalisation d'une durée de 1 an afin de poursuivre ma reconversion en Licence. Licence qui s'effectuera de octobre 2023 à juin 2024. <br><br>
-                                Contactez moi en cliquant sur le bouton ci-dessous, et je me ferai un plaisir de vous répondre !
-                            </p>
-                            <input id="contact_me_btn" class="mt-16 px-4 py-2 mx-auto border border-main-green bg-main-color text-main-green rounded-md w-fit hover:bg-main-green hover:text-main-color transition-all ease-linear duration-300" type="button" value="CONTACTEZ-MOI">
-                        </div>
+    <div class="mx-auto max-w-5xl">
+      <section
+        id="mes_projets"
+        class="mx-6 flex scroll-mt-20 flex-col items-center justify-center gap-16"
+      >
+        <h2
+          class="my-5 text-center text-2xl font-bold uppercase text-main-green"
+        >
+          mes projets
+        </h2>
 
-                        <div id="flip_card_back" class="absolute w-full h-full flex justify-center items-center mt-6 sm:mt-0">
-                            <form method="post" class="flex flex-col justify-center items-center gap-6 my-auto">
-                                <div class="contact_inputbox relative w-[250px]">
-                                    <input class="w-full p-[10px] border border-white/25 bg-main-color rounded-md outline-none text-white resize-none duration-500" type="text" name="nom" required="required" placeholder=" ">
-                                    <span class="absolute left-0 p-[10px] pointer-events-none text-white/50 duration-500">Votre Nom</span>
-                                </div>
-                                <div class="contact_inputbox relative w-[250px]">
-                                    <input class="w-full p-[10px] border border-white/25 bg-main-color rounded-md outline-none text-white resize-none duration-500" type="email" name="email" required="required" placeholder=" ">
-                                    <span class="absolute left-0 p-[10px] pointer-events-none text-white/50 duration-500">Votre email</span>
-                                </div>
-                                <div class="contact_inputbox relative w-[250px]">
-                                    <textarea class="w-full p-[10px] border border-white/25 bg-main-color rounded-md outline-none text-white resize-none duration-500 placeholder:text-white/50" name="message" cols="30" rows="10" required="required" placeholder="Votre message ici"></textarea>    
-                                </div>
-                                <input class="px-4 py-2 mx-auto border border-main-green bg-main-color text-main-green rounded-md w-fit hover:bg-main-green hover:text-main-color transition-all ease-linear duration-300" type="submit" value="ENVOYER" id="submit_btn">
-                            </form>
-                        </div>
-                    </div>       
-                    <div class="invisible">
-                        <div class="sm:hidden">
-                            <br><br><br><br>
-                        </div>
-                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                    </div>
-                </div>      
-        </section>  
+        <div
+          class="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-x-12"
+        >
+          <div
+            class="img_skill_container relative w-1/3 overflow-hidden md:basis-1/4"
+          >
+            <img
+              class="w-fit rounded-xl"
+              src="./img/project_picture/Fish_Memory.jpg"
+              alt="memory_project_img"
+            />
+            <a
+              href="https://github.com/TitiBond/Projet_Python_CF"
+              target="_blank"
+              class="github_link absolute -right-full top-0 h-full w-full rounded-xl bg-white bg-github bg-contain bg-center bg-no-repeat opacity-70 transition-all duration-500 ease-linear"
+            ></a>
+          </div>
+
+          <div
+            class="flex basis-3/4 flex-col items-center justify-center gap-4 text-justify text-white"
+          >
+            <h3 class="text-xl font-bold">Fish Memory</h3>
+            <p>
+              Petit projet en <span class="text-main-green">Python</span> d'un
+              jeu de mémoire basé sur le Memory. L'idée était de mélanger cela
+              avec des images d'un jeu de société que j'adore "Twin it!". Nous
+              avons eu 2 jours pour réaliser ce projet.
+            </p>
+          </div>
+        </div>
+
+        <hr class="mx-auto h-1 w-1/2 bg-main-green md:my-20" />
+
+        <div
+          class="flex flex-col items-center justify-center gap-8 md:flex-row-reverse md:gap-x-12"
+        >
+          <div
+            class="img_skill_container relative w-1/3 overflow-hidden md:basis-1/4"
+          >
+            <img
+              class="w-fit rounded-xl"
+              src="./img/project_picture/D&D.jpg"
+              alt="DD_project_img"
+            />
+            <a
+              href="https://github.com/TitiBond/Projet_Java_CF"
+              target="_blank"
+              class="github_link absolute right-full top-0 h-full w-full rounded-xl bg-white bg-github bg-contain bg-center bg-no-repeat opacity-70 transition-all duration-500 ease-linear"
+            ></a>
+          </div>
+          <div
+            class="flex basis-3/4 flex-col items-center justify-center gap-4 text-justify text-white"
+          >
+            <h3 class="text-xl font-bold">Dungeon and Dragon</h3>
+            <p>
+              Ce projet est un D&D like textuel. Il a été réalisé en
+              <span class="text-main-green">JAVA</span> afin de nous permettre
+              d'apprendre le <span class="text-main-green">POO</span>. Nous
+              avons réalisé ce projet en 4 jours.
+            </p>
+          </div>
+        </div>
+
+        <hr class="mx-auto h-1 w-1/2 bg-main-green md:my-20" />
+
+        <div
+          class="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-x-12"
+        >
+          <div
+            class="img_skill_container relative w-1/3 overflow-hidden md:basis-1/4"
+          >
+            <img
+              class="w-fit rounded-xl"
+              src="./img/project_picture/quiz.jpg"
+              alt="quiz_project_img"
+            />
+            <a
+              href="https://github.com/TitiBond/Projet_Android_CF"
+              target="_blank"
+              class="github_link absolute -right-full top-0 h-full w-full rounded-xl bg-white bg-github bg-contain bg-center bg-no-repeat opacity-70 transition-all duration-500 ease-linear"
+            ></a>
+          </div>
+
+          <div
+            class="flex basis-3/4 flex-col items-center justify-center gap-4 text-justify text-white"
+          >
+            <h3 class="text-xl font-bold">Quiz Android</h3>
+            <p>
+              Quiz Android est un petit projet que nous avons réalisé en 2
+              jours. Nous avons utilisé
+              <span class="text-main-green">JAVA</span>. Vraiment interessant de
+              découvrir la création d'application smartphone. Notre semaine sur
+              <span class="text-main-green">Android</span> n'a duré que 4 jours,
+              j'aurais adoré avoir plus de temps !
+            </p>
+          </div>
+        </div>
+
+        <hr class="mx-auto h-1 w-1/2 bg-main-green md:my-20" />
+
+        <div
+          class="flex flex-col items-center justify-center gap-8 md:flex-row-reverse md:gap-x-12"
+        >
+          <div
+            class="img_skill_container relative w-1/3 overflow-hidden md:basis-1/4"
+          >
+            <img
+              class="w-fit rounded-xl"
+              src="./img/project_picture/calculator.jpg"
+              alt="calculator_training_img"
+            />
+            <a
+              href="https://github.com/TitiBond/Training_Javascript_Calculette"
+              target="_blank"
+              class="github_link absolute right-full top-0 h-full w-full rounded-xl bg-white bg-github bg-contain bg-center bg-no-repeat opacity-70 transition-all duration-500 ease-linear"
+            ></a>
+          </div>
+          <div
+            class="flex basis-3/4 flex-col items-center justify-center gap-4 text-justify text-white"
+          >
+            <h3 class="text-xl font-bold">Calculator</h3>
+            <p>
+              J'ai eu envi de pratiquer html/css et
+              <span class="text-main-green">Javascript</span>. J'ai donc décidé
+              de faire cet exercice connu de la calculette. Une petite journée
+              de travail pour terminer. J'ai pris beaucoup de plaisir à
+              réfléchir à la logique du script :)
+            </p>
+          </div>
+        </div>
+
+        <hr class="mx-auto h-1 w-1/2 bg-main-green md:my-20" />
+
+        <div
+          class="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-x-12"
+        >
+          <div
+            class="img_skill_container relative w-1/3 overflow-hidden md:basis-1/4"
+          >
+            <img
+              class="w-fit rounded-xl"
+              src="./img/project_picture/la_caverne.jpg"
+              alt="php_project_img"
+            />
+            <a
+              href="https://github.com/TitiBond/PROJET_PHP_CF"
+              target="_blank"
+              class="github_link absolute -right-full top-0 h-full w-full rounded-xl bg-white bg-github bg-contain bg-center bg-no-repeat opacity-70 transition-all duration-500 ease-linear"
+            ></a>
+          </div>
+          <div
+            class="flex basis-3/4 flex-col items-center justify-center gap-4 text-justify text-white"
+          >
+            <h3 class="text-xl font-bold">La caverne des jeux</h3>
+            <p>
+              La caverne des jeux est un projet réalisé dans le cadre du cours
+              de <span class="text-main-green">PHP</span> à la Coding Factory.
+              L'objectif était de réaliser, en 3 jours, un site PHP dynamique,
+              sans framework, avec connexion à une base de données
+              <span class="text-main-green">MySQL</span>. Pour la partie Front,
+              le framework Bootstrap est utilisée. Le projet réalisé correspond
+              à un site marchand de jeux de société.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="mt-16 bg-grey-color py-16">
+      <section
+        id="contact"
+        class="mx-auto flex max-w-5xl scroll-mt-20 flex-col gap-6 px-6 text-center"
+      >
+        <h2
+          class="my-5 text-center text-2xl font-bold uppercase text-main-green"
+        >
+          Contact
+        </h2>
+
+        <div
+          id="contact_card"
+          class="mx-auto w-full max-w-[600px] bg-gradient-to-r from-grey-color"
+        >
+          <div
+            id="flip_card_inner"
+            class="relative h-full w-full text-center transition-all duration-700 ease-linear"
+          >
+            <div id="flip_card_front" class="absolute h-full w-full">
+              <p class="text-lg">
+                Mon profil vous interesse ? <br /><br />
+                Parfait ! Je suis à la recherche d'un contrat de
+                professionnalisation d'une durée de 1 an afin de poursuivre ma
+                reconversion en Licence. Licence qui s'effectuera de octobre
+                2023 à juin 2024. <br /><br />
+                Contactez moi en cliquant sur le bouton ci-dessous, et je me
+                ferai un plaisir de vous répondre !
+              </p>
+              <input
+                id="contact_me_btn"
+                class="mx-auto mt-16 w-fit rounded-md border border-main-green bg-main-color px-4 py-2 text-main-green transition-all duration-300 ease-linear hover:bg-main-green hover:text-main-color"
+                type="button"
+                value="CONTACTEZ-MOI"
+              />
+            </div>
+
+            <div
+              id="flip_card_back"
+              class="absolute mt-6 flex h-full w-full items-center justify-center sm:mt-0"
+            >
+              <form
+                method="post"
+                class="my-auto flex flex-col items-center justify-center gap-6"
+              >
+                <div class="contact_inputbox relative w-[250px]">
+                  <input
+                    class="w-full resize-none rounded-md border border-white/25 bg-main-color p-[10px] text-white outline-none duration-500"
+                    type="text"
+                    name="nom"
+                    required="required"
+                    placeholder=" "
+                  />
+                  <span
+                    class="pointer-events-none absolute left-0 p-[10px] text-white/50 duration-500"
+                    >Votre Nom</span
+                  >
+                </div>
+                <div class="contact_inputbox relative w-[250px]">
+                  <input
+                    class="w-full resize-none rounded-md border border-white/25 bg-main-color p-[10px] text-white outline-none duration-500"
+                    type="email"
+                    name="email"
+                    required="required"
+                    placeholder=" "
+                  />
+                  <span
+                    class="pointer-events-none absolute left-0 p-[10px] text-white/50 duration-500"
+                    >Votre email</span
+                  >
+                </div>
+                <div class="contact_inputbox relative w-[250px]">
+                  <textarea
+                    class="w-full resize-none rounded-md border border-white/25 bg-main-color p-[10px] text-white outline-none duration-500 placeholder:text-white/50"
+                    name="message"
+                    cols="30"
+                    rows="10"
+                    required="required"
+                    placeholder="Votre message ici"
+                  ></textarea>
+                </div>
+                <input
+                  class="mx-auto w-fit rounded-md border border-main-green bg-main-color px-4 py-2 text-main-green transition-all duration-300 ease-linear hover:bg-main-green hover:text-main-color"
+                  type="submit"
+                  value="ENVOYER"
+                  id="submit_btn"
+                />
+              </form>
+            </div>
+          </div>
+          <div class="invisible">
+            <div class="sm:hidden"><br /><br /><br /><br /></div>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          </div>
+        </div>
+      </section>
     </div>
 
     <footer id="footer" class="bg-main-color text-main-green">
-        <section class="max-w-5xl mx-auto p-8 flex flex-col justify-center items-center gap-3">
-            <p >Copyright &copy Titi - 2023</p>
-            <div class="flex justify-around">
-                <a href="https://fr.linkedin.com/in/thibaultcouanon" target="_blank" class="w-1/4">
-                    <img src="/build/img/linkedin_logo.svg" alt="my_linkedin">
-                </a>
-                <a href="https://github.com/TitiBond" target="_blank" class="w-1/4">
-                    <img src="/build/img/github_logo.svg" alt="my_github">
-                </a>    
-            </div>
-        </section>
+      <section
+        class="mx-auto flex max-w-5xl flex-col items-center justify-center gap-3 p-8"
+      >
+        <p>Copyright &copy Titi - 2023</p>
+        <div class="flex justify-around">
+          <a
+            href="https://fr.linkedin.com/in/thibaultcouanon"
+            target="_blank"
+            class="w-1/4"
+          >
+            <img src="/build/img/linkedin_logo.svg" alt="my_linkedin" />
+          </a>
+          <a href="https://github.com/TitiBond" target="_blank" class="w-1/4">
+            <img src="/build/img/github_logo.svg" alt="my_github" />
+          </a>
+        </div>
+      </section>
     </footer>
-    
-    <script src="./app.js"></script>
-</body>
 
+    <script src="./app.js"></script>
+  </body>
 </html>
