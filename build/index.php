@@ -1,9 +1,24 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Ajouter une description pour les moteurs de recherche -->
+    <meta name="description" content="Portofolio de Thibault COUANON">
+    <meta name="keywords" content="COUANON, COUANON Thibault, developpeur full-stack, HTML/CSS, JavaScript, PHP, Java, Python, SQL">
+    <meta name="author" content="Thibault COUANON">
+    <!-- Ajouter une description OpenGraph -->
+    <meta name="title" property="og:title" content="Thibault COUANON">
+    <meta name="type" property="og:type" content="COUANON, COUANON Thibault, developpeur full-stack, HTML/CSS, JavaScript, PHP, Java, Python, SQL">
+    <meta name="image" property="og:image" content="./Images/titi.svg">
+    <meta name="url" property="og:url" content="https://www.couanon-thibault.com">
+    <meta name="description" property="og:description" content="Portoflio de Thibault COUANON">
+    <meta name="local" property="og:local" content="France">
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg" />
     <link rel="icon" type="image/png" href="./img/favicon/favicon.png" />
@@ -770,6 +785,10 @@
               <?php 
                 if (isset($_POST['message'])){
                   $retour = mail('couanonthibault@hotmail.fr', 'Formulaire de contact PortFolio', "Nom du contact : " . $_POST['nom'] . "\r\n" .  "email du contact : " . $_POST['email'] . "\r\n" . "message du contact : " . $_POST['message'], 'From : mon-portfolio@hostinger.fr');
+                  if($retour){
+                    $_SESSION['form_sent'] = true;
+                  }
+                }
               ?>
             </div>
           </div>
@@ -801,6 +820,12 @@
       </section>
     </footer>
 
+    <?php
+      if(isset($_SESSION['form_sent']) && $_SESSION['form_sent'] == true){
+        echo "<script>alert('Votre message est envoyé')</script>";
+        unset($_SESSION['form_sent']);
+      }
+    ?>
     <script src="./app.js"></script>
   </body>
 </html>
