@@ -971,7 +971,7 @@ html{
 }
 
 .bg-github{
-  background-image: url('/build/img/GitHub_Logo.png');
+  background-image: url('../img/GitHub_Logo.png');
 }
 
 .bg-gradient-to-r{
@@ -1229,6 +1229,7 @@ nav a:hover{
   width: 100px;
   border-radius: 50%;
   position: absolute;
+  margin: auto;
   opacity: 0;
   transform: scale(0);
   z-index: 1;
@@ -1256,6 +1257,7 @@ nav a:hover{
 
 #flip_card_inner{
   transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
 }
 
 #flip_card_front, #flip_card_back{
@@ -1309,6 +1311,13 @@ nav a:hover{
 ::-webkit-scrollbar{
   height: 0;
   width: 0;
+}
+
+#slider_container{
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .placeholder\:text-white\/50::-moz-placeholder{
@@ -1573,6 +1582,10 @@ nav a:hover{
 
   .md\:w-1\/3{
     width: 33.333333%;
+  }
+
+  .md\:w-2\/3{
+    width: 66.666667%;
   }
 
   .md\:basis-1\/4{

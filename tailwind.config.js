@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'github' : "url('/build/img/GitHub_Logo.png')"
+        'github' : "url('../img/GitHub_Logo.png')"
       }
     },
     letterSpacing: {

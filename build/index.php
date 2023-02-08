@@ -183,11 +183,11 @@ session_start();
         class="mx-auto flex max-w-5xl flex-col items-center px-6 md:flex-row md:justify-around"
       >
         <img
-          class="mb-8 w-1/2 rounded-tl-3xl rounded-br-3xl rounded-tr-[25%] rounded-bl-[25%] grayscale transition-all duration-1000 ease-linear hover:grayscale-0 sm:w-1/3 md:mb-0 md:mt-6 md:w-1/3"
+          class="mb-8 w-1/2 rounded-tl-3xl rounded-br-3xl rounded-tr-[25%] rounded-bl-[25%] grayscale transition-all duration-1000 ease-linear hover:grayscale-0 sm:w-1/3 md:mb-0 md:mt-6"
           src="./img/me.jpg"
           alt="picture_of_me"
         />
-        <div class="md:px-10 md:text-justify">
+        <div class="md:px-10 md:text-justify md:w-2/3">
           <h2
             class="my-4 text-center text-2xl font-bold uppercase text-main-green"
           >
@@ -243,7 +243,7 @@ session_start();
               <p class="m-2 mb-4 text-center">
                 C'est comme cela que je qualifierais mon parcours. <br /><br />
                 Je pense toujours aujourd'hui que le schéma scolaire n'est pas
-                adapté pour tout le monde. <br /><br />
+                adapté à tout le monde. <br /><br />
                 C'était le cas pour moi :) <br /><br />
                 Après l'obtention de mon BAC STL Physique, je décide d'arreter
                 les études.
@@ -377,7 +377,6 @@ session_start();
                 Reconversion
               </h2>
               <p class="m-2 mb-4 text-center">
-                En 2016, je passe mon permis Transport en commun. <br /><br />
                 Je décide de reprendre les études pour me recentrer sur ce qui
                 me plait. <br /><br />
                 Je valide un BTS en domotique en 2022. <br /><br />
@@ -451,9 +450,9 @@ session_start();
         <div
           class="grid grid-cols-2 items-center justify-items-center gap-6 sm:gap-y-14 md:grid-cols-3 md:gap-y-16"
         >
-          <div class="skill_content grid items-center justify-items-center">
+          <div class="skill_content relative grid items-center justify-items-center">
             <img
-              class="transition-aall img_skill w-1/2 duration-500 ease-linear"
+              class="transition-all img_skill w-1/2 duration-500 ease-linear"
               src="./img/language_icons/html.svg"
               alt="html_svg"
             />
@@ -461,9 +460,9 @@ session_start();
               >HTML</span
             >
           </div>
-          <div class="skill_content grid items-center justify-items-center">
+          <div class="skill_content relative grid items-center justify-items-center">
             <img
-              class="transition-aall img_skill w-1/2 duration-500 ease-linear"
+              class="transition-all img_skill w-1/2 duration-500 ease-linear"
               src="./img/language_icons/css.svg"
               alt="css_svg"
             />
@@ -471,9 +470,9 @@ session_start();
               >CSS</span
             >
           </div>
-          <div class="skill_content grid items-center justify-items-center">
+          <div class="skill_content relative grid items-center justify-items-center">
             <img
-              class="transition-aall img_skill w-1/2 duration-500 ease-linear"
+              class="transition-all img_skill w-1/2 duration-500 ease-linear"
               src="./img/language_icons/javascript.svg"
               alt="javascript_svg"
             />
@@ -481,9 +480,9 @@ session_start();
               >JAVASCRIPT</span
             >
           </div>
-          <div class="skill_content grid items-center justify-items-center">
+          <div class="skill_content relative grid items-center justify-items-center">
             <img
-              class="transition-aall img_skill w-1/2 duration-500 ease-linear"
+              class="transition-all img_skill w-1/2 duration-500 ease-linear"
               src="./img/language_icons/java.svg"
               alt="java_svg"
             />
@@ -491,9 +490,9 @@ session_start();
               >JAVA</span
             >
           </div>
-          <div class="skill_content grid items-center justify-items-center">
+          <div class="skill_content relative grid items-center justify-items-center">
             <img
-              class="transition-aall img_skill w-1/2 duration-500 ease-linear"
+              class="transition-all img_skill w-1/2 duration-500 ease-linear"
               src="./img/language_icons/php.svg"
               alt="php_svg"
             />
@@ -501,9 +500,9 @@ session_start();
               >PHP</span
             >
           </div>
-          <div class="skill_content grid items-center justify-items-center">
+          <div class="skill_content relative grid items-center justify-items-center">
             <img
-              class="transition-aall img_skill w-1/2 duration-500 ease-linear"
+              class="transition-all img_skill w-1/2 duration-500 ease-linear"
               src="./img/language_icons/python.svg"
               alt="python_svg"
             />
