@@ -555,6 +555,18 @@ html{
   bottom: 1rem;
 }
 
+.left-1\/4{
+  left: 25%;
+}
+
+.-top-full{
+  top: -100%;
+}
+
+.right-1\/4{
+  right: 25%;
+}
+
 .-right-full{
   right: -100%;
 }
@@ -565,42 +577,6 @@ html{
 
 .left-0{
   left: 0px;
-}
-
-.bottom-0{
-  bottom: 0px;
-}
-
-.-bottom-20{
-  bottom: -5rem;
-}
-
-.left-1\/2{
-  left: 50%;
-}
-
-.left-full{
-  left: 100%;
-}
-
-.left-1\/4{
-  left: 25%;
-}
-
-.-top-1\/2{
-  top: -50%;
-}
-
-.-top-3\/4{
-  top: -75%;
-}
-
-.-top-full{
-  top: -100%;
-}
-
-.right-1\/4{
-  right: 25%;
 }
 
 .z-20{
@@ -921,20 +897,16 @@ html{
   border-radius: 0.25rem;
 }
 
-.rounded-2xl{
-  border-radius: 1rem;
-}
-
-.rounded-xl{
-  border-radius: 0.75rem;
+.rounded-full{
+  border-radius: 9999px;
 }
 
 .rounded-md{
   border-radius: 0.375rem;
 }
 
-.rounded-full{
-  border-radius: 9999px;
+.rounded-xl{
+  border-radius: 0.75rem;
 }
 
 .rounded-tl-3xl{
@@ -953,12 +925,12 @@ html{
   border-bottom-left-radius: 25%;
 }
 
-.border{
-  border-width: 1px;
-}
-
 .border-2{
   border-width: 2px;
+}
+
+.border{
+  border-width: 1px;
 }
 
 .border-main-green{
