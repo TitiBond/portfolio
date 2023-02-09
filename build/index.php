@@ -647,7 +647,7 @@ session_start();
           >
             <h3 class="text-xl font-bold">Calculator</h3>
             <p>
-              J'ai eu envi de pratiquer html/css et
+              J'ai eu envie de pratiquer html/css et
               <span class="text-main-green">Javascript</span>. J'ai donc décidé
               de faire cet exercice connu de la calculette. Une petite journée
               de travail pour terminer. J'ai pris beaucoup de plaisir à
@@ -685,7 +685,7 @@ session_start();
               L'objectif était de réaliser, en 3 jours, un site PHP dynamique,
               sans framework, avec connexion à une base de données
               <span class="text-main-green">MySQL</span>. Pour la partie Front,
-              le framework Bootstrap est utilisée. Le projet réalisé correspond
+              le framework Bootstrap est utilisé. Le projet réalisé correspond
               à un site marchand de jeux de société.
             </p>
           </div>
@@ -783,7 +783,7 @@ session_start();
               </form>
               <?php 
                 if (isset($_POST['message'])){
-                  $retour = mail('couanonthibault@hotmail.fr', 'Formulaire de contact PortFolio', "Nom du contact : " . $_POST['nom'] . "\r\n" .  "email du contact : " . $_POST['email'] . "\r\n" . "message du contact : " . $_POST['message'], 'From : mon-portfolio@hostinger.fr');
+                  $retour = mail('email@email.fr', 'Formulaire de contact PortFolio', "Nom du contact : " . $_POST['nom'] . "\r\n" .  "email du contact : " . $_POST['email'] . "\r\n" . "message du contact : " . $_POST['message'], 'From : mon-portfolio@hostinger.fr');
                   if($retour){
                     $_SESSION['form_sent'] = true;
                   }
