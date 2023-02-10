@@ -91,18 +91,20 @@ nav a:hover{
 }
 
 #flip_card_inner{
-    
     transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
 }
 
 #flip_card_front, #flip_card_back{
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
+    -webkit-transform: translateZ(1px);
 }
 
 #flip_card_back{
     transform: rotateY(180deg);
+}
+#flip_card_front{
+    
 }
 
 

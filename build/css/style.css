@@ -1257,17 +1257,20 @@ nav a:hover{
 
 #flip_card_inner{
   transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
 }
 
 #flip_card_front, #flip_card_back{
   -webkit-backface-visibility: hidden;
   /* Safari */
   backface-visibility: hidden;
+  -webkit-transform: translateZ(1px);
 }
 
 #flip_card_back{
   transform: rotateY(180deg);
+}
+
+#flip_card_front{
 }
 
 .contact_inputbox input:not(:-moz-placeholder-shown) ~ span{
@@ -1578,10 +1581,6 @@ nav a:hover{
 
   .md\:mt-6{
     margin-top: 1.5rem;
-  }
-
-  .md\:w-1\/3{
-    width: 33.333333%;
   }
 
   .md\:w-2\/3{

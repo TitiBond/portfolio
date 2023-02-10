@@ -14,7 +14,7 @@ session_start();
     <!-- Ajouter une description OpenGraph -->
     <meta name="title" property="og:title" content="Thibault COUANON">
     <meta name="type" property="og:type" content="COUANON, COUANON Thibault, developpeur full-stack, HTML/CSS, JavaScript, PHP, Java, Python, SQL">
-    <meta name="image" property="og:image" content="./Images/titi.svg">
+    <meta name="image" property="og:image" content="./img/favicon/favicon2.png">
     <meta name="url" property="og:url" content="https://www.couanon-thibault.com">
     <meta name="description" property="og:description" content="Portoflio de Thibault COUANON">
     <meta name="local" property="og:local" content="France">
