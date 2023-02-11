@@ -80,3 +80,18 @@ function prevSlide(){
 next_btn.addEventListener('click', nextSlide);
 prev_btn.addEventListener('click',prevSlide);
 /*END SLIDER*/
+
+
+
+/*START SHOW ON SCROLL*/
+let div_hidden = document.querySelectorAll('.div_hidden');
+
+const observer2 = new IntersectionObserver((entries)=>{
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('div_show');
+    }
+  });
+});
+div_hidden.forEach((el) => observer2.observe(el));
+/*END SHOW ON SCROLL*/

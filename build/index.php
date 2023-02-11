@@ -514,7 +514,7 @@ session_start();
       </section>
     </div>
 
-    <div class="mx-auto max-w-5xl">
+    <div class="mx-auto max-w-5xl overflow-x-hidden">
       <section
         id="mes_projets"
         class="mx-6 flex scroll-mt-20 flex-col items-center justify-center gap-16"
@@ -526,7 +526,7 @@ session_start();
         </h2>
 
         <div
-          class="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-x-12"
+          class="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-x-12 translate-x-full opacity-0 blur-sm transition-all duration-1000 delay-300 ease-in-out div_hidden"
         >
           <div
             class="img_skill_container relative w-1/3 overflow-hidden md:basis-1/4"
@@ -556,10 +556,10 @@ session_start();
           </div>
         </div>
 
-        <hr class="mx-auto h-1 w-1/2 bg-main-green md:my-20" />
+        <hr class="mx-auto h-0 w-0 bg-main-green md:my-20 opacity-0 transition-all duration-1000 delay-300 div_hidden" />
 
         <div
-          class="flex flex-col items-center justify-center gap-8 md:flex-row-reverse md:gap-x-12"
+          class="flex flex-col items-center justify-center gap-8 md:flex-row-reverse md:gap-x-12 -translate-x-full opacity-0 blur-sm transition-all duration-1000 delay-300 ease-in-out div_hidden"
         >
           <div
             class="img_skill_container relative w-1/3 overflow-hidden md:basis-1/4"
@@ -588,10 +588,10 @@ session_start();
           </div>
         </div>
 
-        <hr class="mx-auto h-1 w-1/2 bg-main-green md:my-20" />
+        <hr class="mx-auto h-0 w-0 bg-main-green md:my-20 opacity-0 transition-all duration-1000 delay-300 div_hidden" />
 
         <div
-          class="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-x-12"
+          class="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-x-12 translate-x-full opacity-0 blur-sm transition-all duration-1000 delay-300 ease-in-out div_hidden"
         >
           <div
             class="img_skill_container relative w-1/3 overflow-hidden md:basis-1/4"
@@ -623,10 +623,10 @@ session_start();
           </div>
         </div>
 
-        <hr class="mx-auto h-1 w-1/2 bg-main-green md:my-20" />
+        <hr class="mx-auto h-0 w-0 bg-main-green md:my-20 opacity-0 transition-all duration-1000 delay-300 div_hidden" />
 
         <div
-          class="flex flex-col items-center justify-center gap-8 md:flex-row-reverse md:gap-x-12"
+          class="flex flex-col items-center justify-center gap-8 md:flex-row-reverse md:gap-x-12 -translate-x-full opacity-0 blur-sm transition-all duration-1000 delay-300 ease-in-out div_hidden"
         >
           <div
             class="img_skill_container relative w-1/3 overflow-hidden md:basis-1/4"
@@ -656,10 +656,10 @@ session_start();
           </div>
         </div>
 
-        <hr class="mx-auto h-1 w-1/2 bg-main-green md:my-20" />
+        <hr class="mx-auto h-0 w-0 bg-main-green md:my-20 opacity-0 transition-all duration-1000 delay-300 div_hidden" />
 
         <div
-          class="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-x-12"
+          class="flex flex-col items-center justify-center gap-8 md:flex-row md:gap-x-12 translate-x-full opacity-0 blur-sm transition-all duration-1000 delay-300 ease-in-out div_hidden"
         >
           <div
             class="img_skill_container relative w-1/3 overflow-hidden md:basis-1/4"
@@ -825,6 +825,6 @@ session_start();
         unset($_SESSION['form_sent']);
       }
     ?>
-    <script src="./app.js"></script>
+    <script src="./app2.js"></script>
   </body>
 </html>

@@ -703,6 +703,10 @@ html{
   height: 40px;
 }
 
+.h-0{
+  height: 0px;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
@@ -736,6 +740,10 @@ html{
   width: 33.333333%;
 }
 
+.w-0{
+  width: 0px;
+}
+
 .w-\[250px\]{
   width: 250px;
 }
@@ -766,6 +774,16 @@ html{
 
 .origin-top{
   transform-origin: top;
+}
+
+.translate-x-full{
+  --tw-translate-x: 100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-x-full{
+  --tw-translate-x: -100%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .transform{
@@ -883,6 +901,10 @@ html{
 
 .overflow-hidden{
   overflow: hidden;
+}
+
+.overflow-x-hidden{
+  overflow-x: hidden;
 }
 
 .overflow-x-scroll{
@@ -1111,6 +1133,10 @@ html{
   color: rgb(255 255 255 / 0.5);
 }
 
+.opacity-0{
+  opacity: 0;
+}
+
 .opacity-70{
   opacity: 0.7;
 }
@@ -1126,6 +1152,11 @@ html{
   outline-offset: 2px;
 }
 
+.blur-sm{
+  --tw-blur: blur(4px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .grayscale{
   --tw-grayscale: grayscale(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1135,6 +1166,10 @@ html{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.delay-300{
+  transition-delay: 300ms;
 }
 
 .duration-500{
@@ -1155,6 +1190,10 @@ html{
 
 .ease-linear{
   transition-timing-function: linear;
+}
+
+.ease-in-out{
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-mobile-menu{
@@ -1270,9 +1309,6 @@ nav a:hover{
   transform: rotateY(180deg);
 }
 
-#flip_card_front{
-}
-
 .contact_inputbox input:not(:-moz-placeholder-shown) ~ span{
   color: #00dfc4;
   transform: translateX(10px) translateY(-6px);
@@ -1321,6 +1357,18 @@ nav a:hover{
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+}
+
+.div_show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+hr.div_show{
+  opacity: 1;
+  width: 50%;
+  height: 0.25rem;
 }
 
 .placeholder\:text-white\/50::-moz-placeholder{

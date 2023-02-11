@@ -103,10 +103,6 @@ nav a:hover{
 #flip_card_back{
     transform: rotateY(180deg);
 }
-#flip_card_front{
-    
-}
-
 
 .contact_inputbox input:not(:placeholder-shown) ~ span,
 .contact_inputbox input:valid ~ span,
@@ -136,4 +132,16 @@ nav a:hover{
 #slider_container{
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+}
+
+.div_show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+hr.div_show{
+    opacity: 1;
+    width: 50%;
+    height: 0.25rem;
 }
